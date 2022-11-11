@@ -7,6 +7,8 @@ import (
 	"github.com/followthepattern/go-simple-webservice/utils"
 )
 
+//go:generate mockgen -destination=../mocks/services/database.go -package=mocks -source=./memory.go Database
+
 type Database interface {
 	GetAllUser() []models.User
 
